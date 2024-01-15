@@ -19,26 +19,26 @@ Este proyecto es una implementación de automatización de pruebas utilizando el
 
 - Clone el repositorio🐙
   
-- ⚠️ Asegúrese de tener las dependencias y requisitos previos instalados ⚠️.
-  * JDK 11 o superior
-  * Gradle 8.5
+- ⚠️ Asegúrese de tener las dependencias y requisitos previos instalados⚠️.
+  * **JDK 11 o superior**
+  * **Gradle 8.5**
   
 - Construya el proyecto para las pruebas utilizando Gradle 8.5
   
-  * Bash : gradle clean -gradle build
+  * **Bash:** gradle clean -gradle build
 
 - Ejecute pruebas desde la clase Runner.class o por comando
   
-  * Clase Runner : Añadir tags o ejecute todas las pruebas
+  * **Clase Runner:** Añadir tags o ejecute todas las pruebas
 
-  * Comando/Bash :  gradle cucumber -P tags=@TagQueSeQuieraEjecutar
+  * **Bash:**  gradle cucumber -P tags=@TagQueSeQuieraEjecutar
  
   
 - Explore los informes generados en la carpeta 📁
 
-  * Local : test-output/SparkReport/MySparkReport.html 
+  * **Local:** test-output/SparkReport/MySparkReport.html 
 
-  * Cucumber Reports: setear variable de entorno con su token
+  * **Cucumber Reports:** setear variable de entorno con su token
   
   Ejemplo: CUCUMBER_PUBLISH_TOKEN= 1ea0bb86-be2e-******************
 
@@ -46,6 +46,6 @@ Este proyecto es una implementación de automatización de pruebas utilizando el
 
 ¡Contribuciones y sugerencias son bienvenidas! Siéntase libre de abrir problemas o enviar solicitudes de extracción para mejorar este proyecto.
 
-## Autor:
+## 👋 Autor:
 
-Jonathan Gutierrez / QA Automation Tester ❤️😄
+**Jonathan Gutierrez / QA Automation Tester** ❤️😄
