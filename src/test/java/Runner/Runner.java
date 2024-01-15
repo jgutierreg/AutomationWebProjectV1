@@ -9,7 +9,6 @@ import static Pages.BasePage.closeBrowser;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = "@Testsfortable",
         features = "src/test/resources/Cucumber",
         glue = "StepsDefinitions",
         monochrome = true,
