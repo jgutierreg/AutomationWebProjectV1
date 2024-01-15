@@ -1,6 +1,6 @@
 # Proyecto de Automatización Web con Selenium 💻☕
 
-Este proyecto es una implementación de automatización de pruebas utilizando Selenium, Java, Cucumber, JUnit, ChromeDriver, SparkReports y Cucumber Reports. Proporciona un marco de trabajo robusto y escalable para la ejecución eficiente de pruebas de software, facilitando la creación y mantenimiento de casos de prueba automatizados.
+Este proyecto es una implementación de automatización de pruebas utilizando el diseño POM (Page Object Model), Selenium, Java, Cucumber, JUnit, ChromeDriver, SparkReports y Cucumber Reports. Proporciona un marco de trabajo robusto y escalable para la ejecución eficiente de pruebas de software, facilitando la creación y mantenimiento de casos de prueba automatizados.
 
 ## Características Principales ✅:
 
@@ -12,6 +12,8 @@ Este proyecto es una implementación de automatización de pruebas utilizando Se
    -Crear cuenta de Cucumber Reports: https://reports.cucumber.io/
 
 - **Configuración Sencilla:** Incluye una estructura de proyecto clara y sencilla para facilitar la configuración y ejecución de pruebas.
+  
+- **Pruebas Establecidas: ** Dentro del Proyecto hay pruebas de diferentes Softwares de testing para tener una guia de como usar el proyecto
 
 ## 🚀 Cómo Empezar  :
 
