@@ -13,7 +13,7 @@ Este proyecto es una implementación de automatización de pruebas utilizando el
 
 - **Configuración Sencilla:** Incluye una estructura de proyecto clara y sencilla para facilitar la configuración y ejecución de pruebas.
   
-- **Pruebas Establecidas: ** Dentro del Proyecto hay pruebas de diferentes Softwares de testing para tener una guia de como usar el proyecto
+- **Pruebas Establecidas:** Dentro del Proyecto hay pruebas de diferentes Softwares de testing para tener una guia de como usar el proyecto
 
 ## 🚀 Cómo Empezar  :
 
