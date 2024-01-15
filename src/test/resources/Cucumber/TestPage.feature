@@ -7,11 +7,11 @@ Feature: Pruebas de TestPage
     Background: Ir a pagina
       Given me dirijo a TestPage
 
-    @Testsfortable
+ @TestFail
   Scenario: Obtener el texto de una tabla
     When selecciono la opcion de 'Table test page'
     Then obtengo el texto en la tabla de la fila "2" y la columna "1"
-    And valido que el texto obtenido sea "NOse"
+    And valido que el texto obtenido sea "failParam"
 
 
   Scenario Outline: Obtener el texto de una tabla

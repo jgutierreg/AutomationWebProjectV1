@@ -1,9 +1,5 @@
 package Pages;
 
-
-
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -21,15 +17,17 @@ import java.util.List;
 public class BasePage {
     protected static WebDriver driver;
     private static WebDriverWait wait;
-
     private static Actions action;
 
-    static{
+    // Bloque estático para inicializar el WebDriver y WebDriverWait
+    static {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
-    public BasePage(WebDriver driver){
+
+    // Constructor que acepta una instancia externa de WebDriver
+    public BasePage(WebDriver driver) {
         String pathToChromedriver = "src/test/ChromeDrivers/chromedriver.exe";
         BasePage.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -37,86 +35,102 @@ public class BasePage {
         System.setProperty("webdriver.chrome.driver", pathToChromedriver);
     }
 
-    public static void closeDriver() {
-        driver.quit();
-    }
-
-    public static void navigateTo(String url){
+    // Navegar a una URL dada
+    public static void navigateTo(String url) {
         driver.get(url);
     }
 
-    public static void closeBrowser(){
+    // Cerrar el navegador
+    public static void closeBrowser() {
         driver.quit();
     }
 
-    private WebElement findByXpath(String locator){
+    // Método privado para encontrar un WebElement por XPath con espera explícita
+    private WebElement findByXpath(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 
-    public void scrollDownToElement(String locator){
+    // Desplazarse hacia abajo hasta un elemento específico en la página
+    public void scrollDownToElement(String locator) {
         WebElement element = findByXpath(locator);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    public void clickElement(String locator){
+    // Hacer clic en un WebElement si está habilitado
+    public void clickElement(String locator) {
         WebElement element = findByXpath(locator);
-       if(element.isEnabled()){
-           element.click();
-       }
-
+        if (element.isEnabled()) {
+            element.click();
+        }
     }
-    public void write(String locator,String text){
+
+    // Borrar un campo de entrada de texto y escribir texto en él
+    public void write(String locator, String text) {
         findByXpath(locator).clear();
         findByXpath(locator).sendKeys(text);
     }
-    public void selectFromDropdownByValue(String locator,String valueSelect){
-        Select dropdown = new Select (findByXpath(locator));
+
+    // Seleccionar una opción de un menú desplegable por texto visible
+    public void selectFromDropdownByValue(String locator, String valueSelect) {
+        Select dropdown = new Select(findByXpath(locator));
         dropdown.selectByVisibleText(valueSelect);
     }
-    public void selectFromDropdownByIndex(String locator,int valueSelect){
-        Select dropdown = new Select (findByXpath(locator));
+
+    // Seleccionar una opción de un menú desplegable por índice
+    public void selectFromDropdownByIndex(String locator, int valueSelect) {
+        Select dropdown = new Select(findByXpath(locator));
         dropdown.selectByIndex(valueSelect);
     }
 
-    public String getTextFromDropdownByValue(String locator){
-        Select dropdown = new Select (findByXpath(locator));
+    // Obtener el texto visible de la opción seleccionada en un menú desplegable
+    public String getTextFromDropdownByValue(String locator) {
+        Select dropdown = new Select(findByXpath(locator));
         return dropdown.getFirstSelectedOption().getText();
     }
 
-    public void hoverOverElement(String locator){
+    // Mover el cursor del mouse sobre un WebElement
+    public void hoverOverElement(String locator) {
         action.moveToElement(findByXpath(locator));
     }
 
-    public void doubleClickElement(String locator){
+    // Hacer doble clic en un WebElement
+    public void doubleClickElement(String locator) {
         action.doubleClick(findByXpath(locator));
     }
 
-    public void rigthClick(String locator){
+    // Hacer clic derecho en un WebElement
+    public void rightClick(String locator) {
         action.contextClick(findByXpath(locator));
     }
 
-    public String getValueFromTable(String locator, String row, String column){
-        String cell = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
+    // Obtener el texto de una celda específica en una tabla
+    public String getValueFromTable(String locator, String row, String column) {
+        String cell = locator + "/table/tbody/tr[" + row + "]/td[" + column + "]";
         return findByXpath(cell).getText();
     }
 
-    public boolean elementIsDisplayed (String locator){
+    // Verificar si un WebElement está visible
+    public boolean elementIsDisplayed(String locator) {
         return findByXpath(locator).isDisplayed();
     }
 
-    public void switchToiFrame(int iFrameIndex){
+    // Cambiar a un iframe utilizando su índice
+    public void switchToiFrame(int iFrameIndex) {
         driver.switchTo().frame(iFrameIndex);
     }
 
-    public void switchToParentiFrame(){
+    // Cambiar de nuevo al iframe principal
+    public void switchToParentiFrame() {
         driver.switchTo().parentFrame();
     }
 
-    public void dismissAlert(){
+    // Descartar una alerta
+    public void dismissAlert() {
         driver.switchTo().alert().dismiss();
     }
 
-    public List<WebElement> elementList(String locator){
-        return driver.findElements(By.xpath(locator));}
+    // Obtener una lista de WebElements basados en un localizador
+    public List<WebElement> elementList(String locator) {
+        return driver.findElements(By.xpath(locator));
+    }
 }
-
