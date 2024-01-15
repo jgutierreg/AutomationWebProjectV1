@@ -22,18 +22,21 @@ Este proyecto es una implementación de automatización de pruebas utilizando Se
   * Gradle 8.5
   
 - Construya el proyecto para las pruebas utilizando Gradle 8.5
-  *Bash : gradle clean -gradle build
+  
+  * Bash : gradle clean -gradle build
 
-- Ejecute pruebas desde la clase Runner.class o por comando 
+- Ejecute pruebas desde la clase Runner.class o por comando
+  
   * Clase Runner : Añadir tags o ejecute todas las pruebas
 
-  * Comando/Bash :  gradle cucumber -P tags=@TagQueSeQuieraEjecutar 
+  * Comando/Bash :  gradle cucumber -P tags=@TagQueSeQuieraEjecutar
+ 
   
 - Explore los informes generados en la carpeta 📁
 
-  Local : test-output/SparkReport/MySparkReport.html 
+  * Local : test-output/SparkReport/MySparkReport.html 
 
-  Cucumber Reports: setear variable de entorno con su token
+  * Cucumber Reports: setear variable de entorno con su token
   
   Ejemplo: CUCUMBER_PUBLISH_TOKEN= 1ea0bb86-be2e-******************
 
