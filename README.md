@@ -9,6 +9,7 @@ Este proyecto es una implementación de automatización de pruebas utilizando el
 - **Cucumber y JUnit:** Implementa escenarios de prueba utilizando el lenguaje natural Gherkin con Cucumber y ejecuta las pruebas con JUnit.
 
 - **Informes Visuales:** Genera informes visuales detallados con SparkReports y Cucumber Reports para una fácil interpretación de los resultados.
+
    -Crear cuenta de Cucumber Reports: https://reports.cucumber.io/
 
 - **Configuración Sencilla:** Incluye una estructura de proyecto clara y sencilla para facilitar la configuración y ejecución de pruebas.
