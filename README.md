@@ -21,7 +21,7 @@ Este proyecto es una implementación de automatización de pruebas utilizando el
 - Clone el repositorio🐙
   
 - ⚠️ Asegúrese de tener las dependencias y requisitos previos instalados⚠️.
-  * **JDK 11 o superior**
+  * **JDK 17 o superior**
   * **Gradle 8.5**
   
 - Construya el proyecto para las pruebas utilizando Gradle 8.5
